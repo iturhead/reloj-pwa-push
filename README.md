@@ -10,13 +10,5 @@ Progressive Web App que muestra la hora actual del sistema y se actualiza autom�
 - `manifest.json` — configuración de instalación (nombre, íconos, colores, orientación).
 - `icons/icon-192.png`, `icons/icon-512.png` — íconos de la app.
 
-## Cómo probarlo localmente
-```
-python3 -m http.server 8000
-```
-Abre http://localhost:8000 en el navegador. Para probar la instalación como PWA, sírvelo con HTTPS o en localhost (ambos son válidos para service workers).
-
-## Publicar en GitHub Pages (opcional)
-1. Sube estos archivos a un repositorio de GitHub.
-2. Ve a Settings → Pages → selecciona la rama main y la carpeta raíz.
-3. La PWA quedará disponible en `https://<usuario>.github.io/<repositorio>/`.
+## Aplicación en ejecución
+https://iturhead.github.io/reloj-pwa-push/
