@@ -7,7 +7,7 @@
 
   <!-- Metadatos básicos de la PWA -->
   <meta name="description" content="Progressive Web App que muestra la hora actual del sistema en tiempo real." />
-  <meta name="theme-color" content="#1F6FB2" />
+  <meta name="theme-color" content="#7C3AED" />
 
   <!-- Enlace al manifiesto de la aplicación -->
   <link rel="manifest" href="manifest.json" />
@@ -20,22 +20,24 @@
 </head>
 <body>
   <main class="clock-card">
-    <div class="icon-badge" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="9"></circle>
-        <polyline points="12 7 12 12 15.5 14"></polyline>
-      </svg>
+    <div class="ring" aria-hidden="true">
+      <div class="ring-inner"></div>
     </div>
 
-    <h1 class="app-title">Reloj PWA</h1>
-    <p class="app-subtitle">Hora actual</p>
+    <h1 class="app-title">Reloj<span>PWA</span></h1>
 
     <!-- Aquí se inserta la hora actualizada cada segundo -->
     <p id="clock" class="clock-time" aria-live="polite">00:00:00</p>
-    <span class="divider"></span>
     <p id="date" class="clock-date"></p>
 
-    <p id="status" class="status-badge">Comprobando conexión…</p>
+    <p id="status" class="status-badge">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+        <path d="M8.5 16.14a6 6 0 0 1 7 0"></path>
+        <circle cx="12" cy="20" r="1"></circle>
+      </svg>
+      <span id="status-text">Comprobando conexión…</span>
+    </p>
   </main>
 
   <script src="script.js"></script>

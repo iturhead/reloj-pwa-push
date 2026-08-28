@@ -10,6 +10,7 @@
 const clockElement = document.getElementById("clock");
 const dateElement = document.getElementById("date");
 const statusElement = document.getElementById("status");
+const statusTextElement = document.getElementById("status-text");
 
 // Nombres de los días y meses en español para formatear la fecha
 const NOMBRES_DIAS = [
@@ -77,7 +78,7 @@ setInterval(actualizarReloj, 1000);
  * @param {"ready"|"offline"|""} clase
  */
 function actualizarEstado(texto, clase) {
-  statusElement.textContent = texto;
+  statusTextElement.textContent = texto;
   statusElement.className = "status-badge" + (clase ? " " + clase : "");
 }
 
