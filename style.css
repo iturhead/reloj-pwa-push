@@ -1,0 +1,142 @@
+/* Estilos generales de la PWA de reloj — tema oscuro con efecto de brillo */
+
+:root {
+  --color-primario: #4C8DFF;
+  --color-primario-claro: #8FB8FF;
+  --color-fondo-1: #050B1A;
+  --color-fondo-2: #0B1C3D;
+  --color-tarjeta: rgba(12, 22, 45, 0.65);
+  --color-borde: rgba(140, 170, 255, 0.18);
+  --color-texto: #F3F6FF;
+  --color-gris: #8A9BC2;
+  --color-verde: #33D17A;
+  --color-rojo: #FF5C5C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(76, 141, 255, 0.18), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(76, 141, 255, 0.12), transparent 50%),
+    linear-gradient(160deg, var(--color-fondo-1), var(--color-fondo-2));
+  padding: 24px;
+}
+
+.clock-card {
+  position: relative;
+  background: var(--color-tarjeta);
+  border: 1px solid var(--color-borde);
+  backdrop-filter: blur(6px);
+  border-radius: 28px;
+  padding: 44px 40px;
+  text-align: center;
+  max-width: 380px;
+  width: 100%;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.45),
+    0 0 40px rgba(76, 141, 255, 0.12) inset;
+}
+
+.icon-badge {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(76, 141, 255, 0.35), rgba(76, 141, 255, 0.08));
+  color: var(--color-primario-claro);
+  box-shadow: 0 0 24px rgba(76, 141, 255, 0.45);
+}
+
+.app-title {
+  margin: 0 0 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--color-gris);
+}
+
+.app-subtitle {
+  margin: 0 0 18px;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--color-gris);
+  opacity: 0.8;
+}
+
+.clock-time {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: var(--color-texto);
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 25px rgba(140, 180, 255, 0.55), 0 0 60px rgba(76, 141, 255, 0.25);
+}
+
+.divider {
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: 18px auto 16px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primario), transparent);
+}
+
+.clock-date {
+  margin: 0 0 26px;
+  font-size: 14px;
+  color: var(--color-gris);
+  text-transform: capitalize;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 7px 16px;
+  border-radius: 999px;
+  background: rgba(51, 209, 122, 0.12);
+  color: var(--color-verde);
+  border: 1px solid rgba(51, 209, 122, 0.35);
+}
+
+.status-badge::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 8px currentColor;
+}
+
+.status-badge.offline {
+  background: rgba(255, 92, 92, 0.12);
+  color: var(--color-rojo);
+  border-color: rgba(255, 92, 92, 0.35);
+}
+
+.status-badge.ready {
+  background: rgba(51, 209, 122, 0.12);
+  color: var(--color-verde);
+  border-color: rgba(51, 209, 122, 0.35);
+}

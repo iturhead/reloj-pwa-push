@@ -1,0 +1,25 @@
+{
+  "name": "Reloj PWA",
+  "short_name": "Reloj",
+  "description": "Progressive Web App que muestra la hora actual del sistema y se actualiza cada segundo.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0F2A44",
+  "theme_color": "#1F6FB2",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

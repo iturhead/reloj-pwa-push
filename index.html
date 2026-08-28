@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reloj PWA</title>
+
+  <!-- Metadatos básicos de la PWA -->
+  <meta name="description" content="Progressive Web App que muestra la hora actual del sistema en tiempo real." />
+  <meta name="theme-color" content="#1F6FB2" />
+
+  <!-- Enlace al manifiesto de la aplicación -->
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- Ícono de la aplicación -->
+  <link rel="icon" type="image/png" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="clock-card">
+    <div class="icon-badge" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="9"></circle>
+        <polyline points="12 7 12 12 15.5 14"></polyline>
+      </svg>
+    </div>
+
+    <h1 class="app-title">Reloj PWA</h1>
+    <p class="app-subtitle">Hora actual</p>
+
+    <!-- Aquí se inserta la hora actualizada cada segundo -->
+    <p id="clock" class="clock-time" aria-live="polite">00:00:00</p>
+    <span class="divider"></span>
+    <p id="date" class="clock-date"></p>
+
+    <p id="status" class="status-badge">Comprobando conexión…</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
