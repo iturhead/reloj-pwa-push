@@ -8,7 +8,7 @@
 
 // Nombre y versión del cache. Al cambiar la versión, se fuerza la
 // actualización de los archivos guardados en el dispositivo del usuario.
-const NOMBRE_CACHE = "reloj-pwa-cache-v1";
+const NOMBRE_CACHE = "reloj-pwa-cache-v2";
 
 // Lista de archivos que forman el "app shell" y que se guardarán
 // en el cache durante la instalación del service worker.
